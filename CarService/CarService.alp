@@ -186,7 +186,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1718607638127</Id>
 					<Name><![CDATA[прибыль]]></Name>
-					<X>1140</X><Y>160</Y>
+					<X>1140</X><Y>200</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -201,7 +201,7 @@
 				<Variable Class="PlainVariable">
 					<Id>1718690035523</Id>
 					<Name><![CDATA[итоговаяПрибыль]]></Name>
-					<X>1340</X><Y>210</Y>
+					<X>1340</X><Y>240</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -213,7 +213,7 @@
 				<Variable Class="Parameter">
 					<Id>1718690006806</Id>
 					<Name><![CDATA[единовременныеЗатраты]]></Name>
-					<X>1490</X><Y>150</Y>
+					<X>1480</X><Y>130</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -222,6 +222,9 @@
 						<Type><![CDATA[double]]></Type>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[900000]]></Code>
+						</DefaultValue>
 						<ParameterEditor>
 							<Id>1718690006804</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
@@ -5109,7 +5112,7 @@ agent.наПолировку = true;]]></Code>
 				<Text>
 					<Id>1718615147992</Id>
 					<Name><![CDATA[text3]]></Name>
-					<X>1020</X><Y>80</Y>
+					<X>1020</X><Y>60</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5119,7 +5122,9 @@ agent.наПолировку = true;]]></Code>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Было построено N участков на сумму Т тысяч рублей]]></Text>
+					<Text><![CDATA[Было построено 9 участков на сумму 900 тысяч рублей (
+кабинет менеджера, 2 мойки, 2 бокса сборки\разборки\дефектовки,
+2 подготовочных бокса, 2 покрасочные камеры)]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>20</Size>
@@ -5130,7 +5135,7 @@ agent.наПолировку = true;]]></Code>
 				<Text>
 					<Id>1718615250877</Id>
 					<Name><![CDATA[text4]]></Name>
-					<X>1020</X><Y>120</Y>
+					<X>1020</X><Y>160</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -5152,7 +5157,7 @@ agent.наПолировку = true;]]></Code>
 				<Text>
 					<Id>1718615336319</Id>
 					<Name><![CDATA[text5]]></Name>
-					<X>1020</X><Y>200</Y>
+					<X>1020</X><Y>230</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
