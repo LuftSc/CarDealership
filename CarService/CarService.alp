@@ -198,6 +198,39 @@
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1718690035523</Id>
+					<Name><![CDATA[итоговаяПрибыль]]></Name>
+					<X>1340</X><Y>210</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+					</Properties>
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1718690006806</Id>
+					<Name><![CDATA[единовременныеЗатраты]]></Name>
+					<X>1490</X><Y>150</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<ParameterEditor>
+							<Id>1718690006804</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
 			</Variables>
 			<Connectors>
 				<Connector>
@@ -811,6 +844,39 @@
 					</Points>
 				</Connector>
 			</Connectors>
+			<Events>
+				<Event>
+					<Id>1718690057675</Id>
+					<Name><![CDATA[черезТриМесяца]]></Name>
+					<X>2020</X><Y>210</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_MONTH]]></Unit>
+						</Rate>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1718697600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[3]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[MONTH]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[итоговаяПрибыль = прибыль - единовременныеЗатраты;]]></Action>
+				</Event>
+			</Events>
 			<AnalysisData>
     			<DataSet>
 					<Id>1718605505812</Id>
@@ -2770,10 +2836,10 @@ agent.сВытяжкой
 							<Value Class="CodeValue">
 								<Code><![CDATA[agent.общееВремяРемонта /= 60;
 
-if (agent.видРемонта == "лёгкий") {
+if (agent.видРемонта.equals("лёгкий")) {
 	количествоЛёгкихРемонтов++;
 	среднееВремяЛёгкогоРемонта.add(agent.общееВремяРемонта);;
-} else if (agent.видРемонта == "средний") {
+} else if (agent.видРемонта.equals("средний")) {
 	количествоСреднихРемонтов++;
 	среднееВремяСреднегоРемонта.add(agent.общееВремяРемонта);
 } else {
@@ -2786,7 +2852,7 @@ if (agent.видРемонта == "лёгкий") {
 	}
 }
 
-прибыль += agent.рассчитатьПрибыль();]]></Code>
+прибыль += roundToInt(agent.рассчитатьПрибыль());]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -4303,9 +4369,9 @@ return времяРемонта;]]></Body>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
-					<Body><![CDATA[if (видРемонта == "лёгкий") {
+					<Body><![CDATA[if (видРемонта.equals("лёгкий")) {
 	общаяСтоимостьДеталей = 2500 * деталиДляРемонта;
-} else if (видРемонта == "средний") {
+} else if (видРемонта.equals("средний")) {
 	общаяСтоимостьДеталей = 3000 * деталиДляРемонта;
 } else {
 	общаяСтоимостьДеталей = 4000 * деталиДляРемонта;
@@ -4485,6 +4551,9 @@ return (процентПрибыли * (общаяСтоимостьВремен
 			</Presentation>
 
 			<Parameters>			
+				<Parameter>
+					<ParameterName><![CDATA[единовременныеЗатраты]]></ParameterName>
+				</Parameter>
 			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
