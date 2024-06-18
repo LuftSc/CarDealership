@@ -213,7 +213,7 @@
 				<Variable Class="Parameter">
 					<Id>1718625135859</Id>
 					<Name><![CDATA[единовременныеЗатраты]]></Name>
-					<X>1170</X><Y>170</Y>
+					<X>1200</X><Y>170</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -223,7 +223,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[600000]]></Code>
+							<Code><![CDATA[1100000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1718625135857</Id>
@@ -4884,10 +4884,10 @@ agent.наПолировку = true;]]></Code>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
 					<Color>-16777216</Color>
-					<Text><![CDATA[Было построено 6 участков на сумму 600 тысяч рублей
+					<Text><![CDATA[Было построено 11 участков на сумму 1 млн 100 тысяч рублей
 (кабинет менеджера, мойка, бокс сборки\разборки\дефектовки,
 подготовочная камера, покрасочная камера, буфферная зона 
-с карманами)]]></Text>
+с 6 карманами)]]></Text>
 					<Font>
 						<Name>SansSerif</Name>
 						<Size>20</Size>
