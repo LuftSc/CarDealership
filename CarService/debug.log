@@ -1,0 +1,5 @@
+[0618/151926.437:INFO:CONSOLE(21172)] "THREE.WebGLRenderer 92", source: file:///D:/Nice%20apps/AnyLogic/AnyLogic%208.8%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.8.6.202312140457/static/build/three.js (21172)
+[0618/151927.392:INFO:CONSOLE(3660)] "THREE.ColladaLoader: File version 1.4.0", source: file:///D:/Nice%20apps/AnyLogic/AnyLogic%208.8%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.8.6.202312140457/static/libs/ColladaLoader.js (3660)
+[0618/151927.534:INFO:CONSOLE(255)] "Loaded: file:H:/CarDealership/CarService/3d/car.dae", source: file:///D:/Nice%20apps/AnyLogic/AnyLogic%208.8%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.8.6.202312140457/static/init.js (255)
+[0618/151927.660:INFO:CONSOLE(271)] "load end: file:H:/CarDealership/CarService/3d/car.dae", source: file:///D:/Nice%20apps/AnyLogic/AnyLogic%208.8%20Personal%20Learning%20Edition/plugins/com.anylogic.graphics3d_8.8.6.202312140457/static/init.js (271)
+[0618/152125.860:ERROR:gpu_init.cc(523)] Passthrough is not supported, GL is disabled, ANGLE is 
